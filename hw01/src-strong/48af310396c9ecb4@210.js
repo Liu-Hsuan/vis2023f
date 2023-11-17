@@ -93,7 +93,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["data.xlsx", {url: new URL("./files/4773e2b639e59de880e2fe77c3d96e14577c7078e6a2c87dd49abadf086af626e5a9fae7de628bf529d1ac3fdfa4a66343baed51db3ac5fd199533acec6a7c01.xlsx", import.meta.url), mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", toString}]
+    ["data.xlsx", {url: new URL("../data.xlsx", import.meta.url), mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
